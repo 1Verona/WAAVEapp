@@ -1,24 +1,27 @@
 import React from "react"
-import { View, Text, StyleSheet, TouchableOpacity, TouchableHighlight } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native"
 import { useNavigation } from '@react-navigation/native'
 
 const Cadastro = './Cadastro'
 
 import * as Animatable from 'react-native-animatable'
 import { PaperProvider, TextInput } from 'react-native-paper';
-import styled from 'rn-css'
+import Logo from '../../assets/logo.png';
 
 export default function SignIn() {
   const navigation = useNavigation()
   const corla = '#34a094'
+
   return (
     <View style={styles.container}>
+      <Image style={styles.Logo}source={Logo}></Image>
       <Animatable.View
         animation="fadeInLeft"
         delay={500}
         style={styles.containerHeader}
       >
         <Text style={styles.message}>Bem-vindo(a)</Text>
+        <Text style={styles.text2}>entre com sua conta ou crie uma agora mesmo!</Text>
       </Animatable.View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
@@ -32,6 +35,12 @@ export default function SignIn() {
             color: corla,
           }}>Cadastre-se</Text></Text>
         </TouchableOpacity>
+        <Text style={{
+          textAlign: "center",
+          marginTop:165,
+          marginBottom: 5,
+          color: 'gray'
+        }}>WAAVE © 2023</Text>
       </Animatable.View>
     </View>
   );
@@ -43,7 +52,7 @@ export default function SignIn() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#38a69d'
+    backgroundColor: '#006b5f'
   },
   containerHeader: {
     marginTop: '15%',
@@ -53,7 +62,8 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#fff',
+    marginTop: -35,
   },
   containerForm: {
     backgroundColor: '#fff',
@@ -65,7 +75,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    marginTop: 28
+    marginTop: 10,
   },
   input: {
     borderBottomWidth: 1,
@@ -108,4 +118,15 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     borderColor: '#34a094',
   },
+  text2:{
+    fontSize: 17,
+    color: 'white',
+    marginTop: 6,
+  },
+  Logo:{
+    height: 65,
+    width: 65,
+    alignSelf: "center",
+    marginTop: 20,
+  }
 })

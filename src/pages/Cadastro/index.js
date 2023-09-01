@@ -38,6 +38,12 @@ export default function Cadastro() {
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
       </Animatable.View>
+      <Text style={{
+          textAlign: "center",
+          marginTop:165,
+          marginBottom: 5,
+          color: 'gray'
+        }}>WAAVE © 2023</Text>
 
     </View>
   );
