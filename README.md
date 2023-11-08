@@ -1,3 +1,3 @@
 # 🟩 WAAVEapp 👋🏻
-#### • Sistema de controle de mídia utilizando gestospré programados e reconfiguravéis baseado em IA (Machine Learnig) 🤖
+#### • Sistema de controle de mídia utilizando gestos pré programados e reconfiguravéis baseado em IA (Machine Learnig) 🤖
 
